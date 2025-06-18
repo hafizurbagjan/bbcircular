@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-container {
+  background-color: green;
+  padding: 5px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: red;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+</head>
+<body>
+
+<div class="top-container">
+  <h1>The Banking Circular</h1>
+  <p style="color:whitesmoke">Prevailing Circulars</p>
+</div>
+
+<div class="header" id="myHeader" style="justify-content: space-around;display: flex; text-decoration: none;">
+  <a style="text-decoration: none; color:whitesmoke" href="https://hafizurbagjan.github.io/banking/">Home</a>
+  <a style="text-decoration: none; color:whitesmoke" href="https://hafizurbagjan.github.io/banking/#bc">Back</a>
+  <a style="text-decoration: none; color:whitesmoke" href="mailto:hafizurbagjan@gmail.com">e-mail</a>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
